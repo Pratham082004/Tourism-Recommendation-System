@@ -80,7 +80,7 @@ if __name__ == "__main__":
     processed_dir = base_dir / "data"
 
     engineer = FeatureEngineer(
-        input_file=str(processed_dir / "domestic_cleaned.csv"),
-        output_file=str(processed_dir / "domestic_training.csv"),
+        input_file=str(processed_dir / "international_cleaned.csv"),
+        output_file=str(processed_dir / "international_training.csv"),
     )
     engineer.process()

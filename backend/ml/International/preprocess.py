@@ -138,8 +138,9 @@ if __name__ == "__main__":
     dataset_dir = base_dir / "dataset"
     processed_dir = base_dir / "data"
 
-    input_file_path = str(dataset_dir / "Domestic-Indian-Packages.csv")
-    output_file_path = str(processed_dir / "domestic_cleaned.csv")
+    input_file_path = str(dataset_dir / "International Package.csv")
+    output_file_path = str(processed_dir / "international_cleaned.csv")
+
 
     preprocessor = Domestic_Preprocessor(input_file_path, output_file_path)
     preprocessor.process()

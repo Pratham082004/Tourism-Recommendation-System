@@ -4,10 +4,12 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-class Domestic_Recommendation_Engine:
+class International_Recommendation_Engine:
 
     def __init__(self, model_path: str):
+
         pipeline = joblib.load(model_path)
+
         self.vectorizer = pipeline["vectorizer"]
         self.package_vectors = pipeline["package_vectors"]
         self.packages = pipeline["packages"]
@@ -18,7 +20,7 @@ class Domestic_Recommendation_Engine:
         if best_for_val is None:
             return ""
 
-        # Handle numeric inputs (1/2/4/5)̥
+        # Handle numeric inputs (1/2/4/5)
         if isinstance(best_for_val, (int, float)):
             v = int(best_for_val)
             if v == 1:
@@ -48,7 +50,6 @@ class Domestic_Recommendation_Engine:
 
     def build_user_profile(self, user: dict) -> str:
         """Construct a weighted profile string matching the vectorizer's scheme."""
-        # Ensure best_for is compatible with dataset values
         best_for = self._normalize_best_for(user.get("best_for"))
 
         country = self._as_text(user.get("country"))
