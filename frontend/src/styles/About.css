@@ -1,0 +1,9 @@
+@reference "./global.css";
+
+.about-container {
+    @apply w-full;
+}
+
+.about-card {
+    @apply bg-white rounded-[2.5rem] p-8 md:p-14 shadow-[0_8px_40px_rgba(0,0,0,0.03)] border border-slate-100;
+}

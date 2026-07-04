@@ -1,15 +1,16 @@
-body {
-    background: #f4f6f8;
-    color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-main {
-    min-height: calc(100vh - 140px);
-    padding: 40px 0;
+@layer base {
+  html, body {
+    @apply h-full antialiased;
+  }
+  
+  #root {
+    @apply min-h-screen flex flex-col bg-slate-50 text-slate-800 selection:bg-pink-500 selection:text-white;
+  }
 }
