@@ -1,6 +1,6 @@
 import joblib
 import numpy as np
-import pandas as pd
+
 from sklearn.metrics.pairwise import cosine_similarity
 
 
@@ -83,7 +83,7 @@ class Domestic_Recommendation_Engine:
         return " ".join(profile).strip()
 
     def apply_hard_filters(self, user: dict):
-        """Filter candidate packages before scoring."""
+        """Filter packages before scoring."""
 
         filtered = self.packages.copy()
 

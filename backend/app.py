@@ -53,7 +53,7 @@ def create_app():
 
                 break
 
-            except Exception as error:
+            except Exception:
                 logger.warning(
                     f"Database connection failed "
                     f"(Attempt {attempt}/{max_retries}). "
