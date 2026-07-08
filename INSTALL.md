@@ -18,7 +18,7 @@ I highly recommend this route. It will spin up the Frontend, Backend, and Databa
    git clone https://github.com/Pratham082004/ExploreX-Tourism-Recommendation-System
    cd ExploreX-Tourism-Recommendation-System
    ```
-2. Run the magic command:
+2. Run the command:
    ```bash
    docker-compose up  
    ```
