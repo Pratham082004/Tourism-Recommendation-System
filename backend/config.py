@@ -6,8 +6,9 @@ load_dotenv()
 class Config:
     SECRET_KEY = os.getenv("SECRET_KEY")
 
-    HOST = os.getenv("HOST", "0.0.0.0")
-    PORT = int(os.getenv("PORT", 5000))
+    DEBUG = os.getenv("FLASK_DEBUG", "True").lower() in ("true", "1", "t")
+    PORT = int(os.getenv("PORT", 8000))
+    HOST = os.getenv("HOST", "0.0.0.0") 
 
     OPENTRIP_API_KEY = os.getenv("OPENTRIP_API_KEY") 
 

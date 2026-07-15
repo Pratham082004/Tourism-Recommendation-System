@@ -40,7 +40,7 @@ def create_app():
     app.register_blueprint(attraction_bp)
 
     with app.app_context():
-        max_retries = 5
+        max_retries = 10
         retry_delay = 3  
 
         for attempt in range(1, max_retries + 1):
